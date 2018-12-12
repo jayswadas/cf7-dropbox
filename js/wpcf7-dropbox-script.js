@@ -1,5 +1,5 @@
-jQuery(document).ready(function() {
-    wpcf7_dropbox_mailsent_handler();
+document.addEventListener("DOMContentLoaded", function(event) {
+	wpcf7_dropbox_mailsent_handler();
 });
 
 function wpcf7_dropbox_mailsent_handler() {
