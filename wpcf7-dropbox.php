@@ -2,7 +2,7 @@
 /**
  * Plugin Name:  Contact Form 7 Dropbox
  * Description:  Contact Form 7 Add-on - Upload file on Dropbox.
- * Version:      1.0
+ * Version:      1.2
  * Author:       Jay Swadas
  * Contributors: jayswadas
  * Requires at least: 4.0
@@ -77,6 +77,10 @@ class WPCF7_Dropbox {
 			),
 			array(
 				'name' => 'file_input',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'folder',
 				'type' => 'text',
 			)
 		);
@@ -235,15 +239,24 @@ class WPCF7_Dropbox {
 							<label for="wpcf7-dropbox-access-token"><?php esc_html_e( 'Access Token', 'wpcf7-dropbox' );?></label>
 						</th>
 						<td>
-							<input type="text" id="wpcf7-dropbox-access-token" class="large-text" placeholder="<?php esc_html_e( 'Access Token', 'wpcf7-dropbox' );?>" name="wpcf7-dropbox[access_token]" value="<?php echo $fields['access_token'];?>">
+							<input type="password" id="wpcf7-dropbox-access-token" class="large-text" placeholder="<?php esc_html_e( 'Access Token', 'wpcf7-dropbox' );?>" name="wpcf7-dropbox[access_token]" value="<?php echo $fields['access_token'];?>">
 						</td>
 					</tr>
 					<tr>
 						<th scope="row">
-							<label for="wpcf7-dropbox-file-input"><?php esc_html_e( 'File Input ID', 'wpcf7-dropbox' );?></label>
+							<label for="wpcf7-dropbox-file-input"><?php esc_html_e( 'File Input IDs', 'wpcf7-dropbox' );?></label>
 						</th>
 						<td>
-							<input type="text" id="wpcf7-dropbox-file-input" placeholder="<?php esc_html_e( 'File Input ID', 'wpcf7-dropbox' );?>" name="wpcf7-dropbox[file_input]" value="<?php echo $fields['file_input'];?>">
+							<input type="text" id="wpcf7-dropbox-file-input" class="large-text" placeholder="<?php esc_html_e( 'File Input IDs', 'wpcf7-dropbox' );?>" name="wpcf7-dropbox[file_input]" value="<?php echo $fields['file_input'];?>">
+							<small><?php esc_html_e( 'To upload multiple files using multiple id enter comma-separated value. For eg. FILE_ID1,FILE_ID2', 'wpcf7-dropbox' );?></small>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+							<label for="wpcf7-dropbox-file-input"><?php esc_html_e( 'Dropbox Folder', 'wpcf7-dropbox' );?></label>
+						</th>
+						<td>
+							<input type="text" id="wpcf7-dropbox-folder" class="large-text" placeholder="<?php esc_html_e( 'Dropbox Folder', 'wpcf7-dropbox' );?>" name="wpcf7-dropbox[folder]" value="<?php echo $fields['folder'];?>">
 						</td>
 					</tr>
 				</tbody>

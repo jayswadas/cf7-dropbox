@@ -5,11 +5,11 @@ A simple add-on for Contact Form 7 upload file on dropbox.
 
 Add-on plugin for Contact Form 7 - adds the option to upload file directly on dropbox.
 
-NOTE: This plugin requires Contact Form 7 version 4.2 or later. 
+NOTE: This plugin requires Contact Form 7 version 4.8 or later. 
 
 ## Usage
 
-Simply go to your form settings, choose the "Dropbox Settings" tab and set the Dropbox access token and file input ID.
+Simply go to your form settings, choose the "Dropbox Settings" tab and set the Dropbox access token, file input ID and dropbox folder name.
 
 ## Installation
 
@@ -25,6 +25,12 @@ Installing Contact Form 7 Dropbox can be done either by searching for "Contact F
 1. Dropbox Settings tab
 
 ## Changelog
+
+### 1.2
+* Multiple file upload using multiple File Input Ids
+
+### 1.0.1
+* Added "Dropbox Folder" field to upload file on specify dropbox folder.
 
 ### 1.0.0
 * Initial release.
